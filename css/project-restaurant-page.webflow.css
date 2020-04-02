@@ -114,6 +114,7 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 100vh;
   padding-top: 100px;
   padding-bottom: 100px;
   -webkit-box-orient: vertical;
