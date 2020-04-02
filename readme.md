@@ -1,7 +1,7 @@
 From The Odin Project's [curriculum](https://www.theodinproject.com/courses/javascript/lessons/restaurant-page)
 
 # Instructions
-- Create a bare-bones home page for a restaurant, include an image, headline, and some copy about the restaurant
+- Create a bare-bones home page for a restaurant, include an image, headline, and some copy about the restaurant (DONE)
 - Remove these elements from HTML and leave only the <div id='content'>
 - Add all these elements only using JavaScript by appending each new element to the div#content
 - Write this code inside it's own module and then import and call it inside of index.js
