@@ -51,4 +51,64 @@ let home = (() => {
 })();
 
 // Menu
+let menu = (() => {
+    let _section = document.createElement('div')
+    _section.classList.add('content-box')
+    _section.setAttribute('id','menu')
 
+    let _grid = document.createElement('div')
+    _grid.classList.add('w-layout-grid')
+    _grid.classList.add('grid')
+    _section.appendChild(_grid)
+
+    let menuCategories = (name) => {
+        let category = document.createElement('div')
+        category.classList.add('menu-category')
+        category.setAttribute('id', name)
+        _grid.appendChild(category)
+
+        function capitalizeFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+
+        let h1 = document.createElement('h1')
+        h1.textContent = capitalizeFirstLetter(name)
+        category.appendChild(h1)
+
+        return category
+    }
+
+    let _starters = menuCategories('starters')
+    let _mains = menuCategories('mains')
+    let _desserts = menuCategories('desserts')
+
+    const menuItems = (name, price, category) => {
+        let _item = document.createElement('div')
+        _item.classList.add('menu-item')
+
+        let _name = document.createElement('div')
+        _name.textContent = name
+        _item.appendChild(_name)
+
+        let _price = document.createElement('div')
+        _price.textContent = price
+        _item.appendChild(_price)
+
+        category.appendChild(_item)
+    };
+    
+    menuItems('Fries', '$4', _starters)
+    menuItems('Beef loaded fries', '$6', _starters)
+    menuItems('Veggie loaded fries', '$6', _starters)
+    menuItems('Chicken nuggets', '$6', _starters)
+    menuItems('Beef burger', '$12', _mains)
+    menuItems('Chicken burger', '$12', _mains)
+    menuItems('Mushroom burger', '$12', _mains)
+    menuItems('Vegan burger', '$12', _mains)
+    menuItems('Apple crumble', '$7', _desserts)
+    menuItems('Lemon curd tart', '$7', _desserts)
+    menuItems('Tiramisu', '$7', _desserts)
+    menuItems('Deep fried icecream', '$7', _desserts)
+
+    content.appendChild(_section)
+})();
