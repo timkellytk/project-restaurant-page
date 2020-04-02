@@ -1,19 +1,19 @@
 function generateContact() {
-    let content = document.querySelector('#content')
+    const content = document.querySelector('#content')
 
-    let section = document.createElement('div')
+    const section = document.createElement('div')
     section.classList.add('content-box')
 
-    let h1 = document.createElement('h1')
+    const h1 = document.createElement('h1')
     h1.textContent = 'Get in touch'
     section.appendChild(h1)
 
-    let contactItem = (name, link, anchorText) => {
-        let div = document.createElement('div')
+    const contactItem = (name, link, anchorText) => {
+        const div = document.createElement('div')
         div.classList.add('contact-items')
         div.textContent = `${name}:`
 
-        let a = document.createElement('a')
+        const a = document.createElement('a')
         a.classList.add('contact-link')
         a.textContent = anchorText
         a.href = link

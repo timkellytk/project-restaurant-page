@@ -1,21 +1,21 @@
 function generateHome() {
-    let content = document.querySelector('#content')
+    const content = document.querySelector('#content')
 
-    let section = document.createElement('div')
+    const section = document.createElement('div')
     section.classList.add('home')
     section.setAttribute('id','home')
 
-    let h1 = document.createElement('h1')
+    const h1 = document.createElement('h1')
     h1.classList.add('hero-heading')
     h1.textContent =  'The Kelly\'s at Glenrowan'
     section.appendChild(h1)
 
-    let h3 = document.createElement('h3')
+    const h3 = document.createElement('h3')
     h3.classList.add('hero-subheading')
     h3.textContent =  'Established in 1880'
     section.appendChild(h3)
 
-    let img = document.createElement('img')
+    const img = document.createElement('img')
     img.src = "images/petr-sevcovic-fyQr1T3GE34-unsplash.jpg"
     section.appendChild(img)
 

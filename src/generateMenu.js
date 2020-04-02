@@ -1,45 +1,45 @@
 function generateMenu () {
-    let content = document.querySelector('#content')
+    const content = document.querySelector('#content')
 
-    let section = document.createElement('div')
+    const section = document.createElement('div')
     section.classList.add('content-box')
     section.setAttribute('id','menu')
 
-    let grid = document.createElement('div')
+    const grid = document.createElement('div')
     grid.classList.add('w-layout-grid')
     grid.classList.add('grid')
     section.appendChild(grid)
 
-    let menuCategories = (name) => {
-        let category = document.createElement('div')
+    const menuCategories = (name) => {
+        const category = document.createElement('div')
         category.classList.add('menu-category')
         category.setAttribute('id', name)
         grid.appendChild(category)
 
-        function capitalizeFirstLetter(string) {
+        function capitalizeFirstconstter(string) {
             return string.charAt(0).toUpperCase() + string.slice(1);
         }
 
-        let h1 = document.createElement('h1')
-        h1.textContent = capitalizeFirstLetter(name)
+        const h1 = document.createElement('h1')
+        h1.textContent = capitalizeFirstconstter(name)
         category.appendChild(h1)
 
         return category
     }
 
-    let starters = menuCategories('starters')
-    let mains = menuCategories('mains')
-    let desserts = menuCategories('desserts')
+    const starters = menuCategories('starters')
+    const mains = menuCategories('mains')
+    const desserts = menuCategories('desserts')
 
     const menuItems = (name, price, category) => {
-        let item = document.createElement('div')
+        const item = document.createElement('div')
         item.classList.add('menu-item')
 
-        let itemName = document.createElement('div')
+        const itemName = document.createElement('div')
         itemName.textContent = name
         item.appendChild(itemName)
 
-        let itemPrice = document.createElement('div')
+        const itemPrice = document.createElement('div')
         itemPrice.textContent = price
         item.appendChild(itemPrice)
 
