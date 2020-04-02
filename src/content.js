@@ -1,71 +1,46 @@
-let content = document.querySelector('#content')
-
-// Navbar
-function nav () {
-    console.log('nav fired')
-    let _section = document.createElement('div')
-    _section.classList.add('nav')
-
-    let _homeBtn = document.createElement('div')
-    _homeBtn.classList.add('menu-btn')
-    _homeBtn.setAttribute('id','home-btn')
-    _homeBtn.textContent = 'Home'
-    _section.appendChild(_homeBtn)
-
-    let _menuBtn = document.createElement('div')
-    _menuBtn.classList.add('menu-btn')
-    _menuBtn.setAttribute('id','menu-btn')
-    _menuBtn.textContent = 'Menu'
-    _section.appendChild(_menuBtn)
-
-    let contactBtn = document.createElement('div')
-    contactBtn.classList.add('menu-btn')
-    contactBtn.setAttribute('id','contact-btn')
-    contactBtn.textContent = 'Menu'
-    _section.appendChild(contactBtn)
-
-    content.appendChild(_section)
-}
-
 // Home
 function home() {
-    let _section = document.createElement('div')
-    _section.classList.add('home')
-    _section.setAttribute('id','home')
+    let content = document.querySelector('#content')
 
-    let _h1 = document.createElement('h1')
-    _h1.classList.add('hero-heading')
-    _h1.textContent =  'The Kelly\'s at Glenrowan'
-    _section.appendChild(_h1)
+    let section = document.createElement('div')
+    section.classList.add('home')
+    section.setAttribute('id','home')
 
-    let _h3 = document.createElement('h3')
-    _h3.classList.add('hero-subheading')
-    _h3.textContent =  'Established in 1880'
-    _section.appendChild(_h3)
+    let h1 = document.createElement('h1')
+    h1.classList.add('hero-heading')
+    h1.textContent =  'The Kelly\'s at Glenrowan'
+    section.appendChild(h1)
 
-    let _img = document.createElement('img')
-    _img.src = "images/petr-sevcovic-fyQr1T3GE34-unsplash.jpg"
-    _section.appendChild(_img)
+    let h3 = document.createElement('h3')
+    h3.classList.add('hero-subheading')
+    h3.textContent =  'Established in 1880'
+    section.appendChild(h3)
 
-    content.appendChild(_section)
+    let img = document.createElement('img')
+    img.src = "images/petr-sevcovic-fyQr1T3GE34-unsplash.jpg"
+    section.appendChild(img)
+
+    content.appendChild(section)
 }
 
 // Menu
 function menu () {
-    let _section = document.createElement('div')
-    _section.classList.add('content-box')
-    _section.setAttribute('id','menu')
+    let content = document.querySelector('#content')
 
-    let _grid = document.createElement('div')
-    _grid.classList.add('w-layout-grid')
-    _grid.classList.add('grid')
-    _section.appendChild(_grid)
+    let section = document.createElement('div')
+    section.classList.add('content-box')
+    section.setAttribute('id','menu')
+
+    let grid = document.createElement('div')
+    grid.classList.add('w-layout-grid')
+    grid.classList.add('grid')
+    section.appendChild(grid)
 
     let menuCategories = (name) => {
         let category = document.createElement('div')
         category.classList.add('menu-category')
         category.setAttribute('id', name)
-        _grid.appendChild(category)
+        grid.appendChild(category)
 
         function capitalizeFirstLetter(string) {
             return string.charAt(0).toUpperCase() + string.slice(1);
@@ -78,69 +53,71 @@ function menu () {
         return category
     }
 
-    let _starters = menuCategories('starters')
-    let _mains = menuCategories('mains')
-    let _desserts = menuCategories('desserts')
+    let starters = menuCategories('starters')
+    let mains = menuCategories('mains')
+    let desserts = menuCategories('desserts')
 
     const menuItems = (name, price, category) => {
-        let _item = document.createElement('div')
-        _item.classList.add('menu-item')
+        let item = document.createElement('div')
+        item.classList.add('menu-item')
 
-        let _name = document.createElement('div')
-        _name.textContent = name
-        _item.appendChild(_name)
+        let itemName = document.createElement('div')
+        itemName.textContent = name
+        item.appendChild(itemName)
 
-        let _price = document.createElement('div')
-        _price.textContent = price
-        _item.appendChild(_price)
+        let itemPrice = document.createElement('div')
+        itemPrice.textContent = price
+        item.appendChild(itemPrice)
 
-        category.appendChild(_item)
+        category.appendChild(item)
     };
     
-    menuItems('Fries', '$4', _starters)
-    menuItems('Beef loaded fries', '$6', _starters)
-    menuItems('Veggie loaded fries', '$6', _starters)
-    menuItems('Chicken nuggets', '$6', _starters)
-    menuItems('Beef burger', '$12', _mains)
-    menuItems('Chicken burger', '$12', _mains)
-    menuItems('Mushroom burger', '$12', _mains)
-    menuItems('Vegan burger', '$12', _mains)
-    menuItems('Apple crumble', '$7', _desserts)
-    menuItems('Lemon curd tart', '$7', _desserts)
-    menuItems('Tiramisu', '$7', _desserts)
-    menuItems('Deep fried icecream', '$7', _desserts)
+    menuItems('Fries', '$4', starters)
+    menuItems('Beef loaded fries', '$6', starters)
+    menuItems('Veggie loaded fries', '$6', starters)
+    menuItems('Chicken nuggets', '$6', starters)
+    menuItems('Beef burger', '$12', mains)
+    menuItems('Chicken burger', '$12', mains)
+    menuItems('Mushroom burger', '$12', mains)
+    menuItems('Vegan burger', '$12', mains)
+    menuItems('Apple crumble', '$7', desserts)
+    menuItems('Lemon curd tart', '$7', desserts)
+    menuItems('Tiramisu', '$7', desserts)
+    menuItems('Deep fried icecream', '$7', desserts)
 
-    content.appendChild(_section)
+    content.appendChild(section)
 }
 
 // Contact
 function contact() {
-    let _section = document.createElement('div')
-    _section.classList.add('content-box')
+    let content = document.querySelector('#content')
 
-    let _h1 = document.createElement('h1')
-    _h1.textContent = 'Get in touch'
-    _section.appendChild(_h1)
+    let section = document.createElement('div')
+    section.classList.add('content-box')
+
+    let h1 = document.createElement('h1')
+    h1.textContent = 'Get in touch'
+    section.appendChild(h1)
 
     let contactItem = (name, link, anchorText) => {
-        let _div = document.createElement('div')
-        _div.classList.add('contact-items')
-        _div.textContent = `${name}:`
+        let div = document.createElement('div')
+        div.classList.add('contact-items')
+        div.textContent = `${name}:`
 
-        let _a = document.createElement('a')
-        _a.classList.add('contact-link')
-        _a.textContent = anchorText
-        _a.href = link
-        _div.appendChild(_a)
+        let a = document.createElement('a')
+        a.classList.add('contact-link')
+        a.textContent = anchorText
+        a.href = link
+        div.appendChild(a)
 
-        _section.appendChild(_div)
+        section.appendChild(div)
     }
 
     contactItem('Email', 'mailto:timpkelly1@gmail.com', 'timpkelly1@gmail.com')
     contactItem('LinkedIn', 'https://www.linkedin.com/in/tim-patrick-kelly/', 'linkedin.com/in/tim-patrick-kelly')
     contactItem('Github', 'https://github.com/timkellytk', 'timkellytk')
 
-    content.appendChild(_section)
+    content.appendChild(section)
 }
 
 export {home, menu, contact}
