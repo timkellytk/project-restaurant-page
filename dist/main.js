@@ -1,1 +1,137 @@
-!function(e){var t={};function n(i){if(t[i])return t[i].exports;var l=t[i]={i:i,l:!1,exports:{}};return e[i].call(l.exports,l,l.exports,n),l.l=!0,l.exports}n.m=e,n.c=t,n.d=function(e,t,i){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:i})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var i=Object.create(null);if(n.r(i),Object.defineProperty(i,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var l in e)n.d(i,l,function(t){return e[t]}.bind(null,l));return i},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s=0)}([function(e,t,n){"use strict";n.r(t),function(){let e=document.querySelector("#content"),t=document.createElement("div");t.classList.add("home"),t.setAttribute("id","home");let n=document.createElement("h1");n.classList.add("hero-heading"),n.textContent="The Kelly's at Glenrowan",t.appendChild(n);let i=document.createElement("h3");i.classList.add("hero-subheading"),i.textContent="Established in 1880",t.appendChild(i);let l=document.createElement("img");l.src="images/petr-sevcovic-fyQr1T3GE34-unsplash.jpg",t.appendChild(l),e.appendChild(t)}(),function(){let e=document.querySelector("#content"),t=document.createElement("div");t.classList.add("content-box"),t.setAttribute("id","menu");let n=document.createElement("div");n.classList.add("w-layout-grid"),n.classList.add("grid"),t.appendChild(n);let i=e=>{let t=document.createElement("div");t.classList.add("menu-category"),t.setAttribute("id",e),n.appendChild(t);let i=document.createElement("h1");var l;return i.textContent=(l=e).charAt(0).toUpperCase()+l.slice(1),t.appendChild(i),t},l=i("starters"),r=i("mains"),d=i("desserts");const c=(e,t,n)=>{let i=document.createElement("div");i.classList.add("menu-item");let l=document.createElement("div");l.textContent=e,i.appendChild(l);let r=document.createElement("div");r.textContent=t,i.appendChild(r),n.appendChild(i)};c("Fries","$4",l),c("Beef loaded fries","$6",l),c("Veggie loaded fries","$6",l),c("Chicken nuggets","$6",l),c("Beef burger","$12",r),c("Chicken burger","$12",r),c("Mushroom burger","$12",r),c("Vegan burger","$12",r),c("Apple crumble","$7",d),c("Lemon curd tart","$7",d),c("Tiramisu","$7",d),c("Deep fried icecream","$7",d),e.appendChild(t)}(),function(){let e=document.querySelector("#content"),t=document.createElement("div");t.classList.add("content-box");let n=document.createElement("h1");n.textContent="Get in touch",t.appendChild(n);let i=(e,n,i)=>{let l=document.createElement("div");l.classList.add("contact-items"),l.textContent=`${e}:`;let r=document.createElement("a");r.classList.add("contact-link"),r.textContent=i,r.href=n,l.appendChild(r),t.appendChild(l)};i("Email","mailto:timpkelly1@gmail.com","timpkelly1@gmail.com"),i("LinkedIn","https://www.linkedin.com/in/tim-patrick-kelly/","linkedin.com/in/tim-patrick-kelly"),i("Github","https://github.com/timkellytk","timkellytk"),e.appendChild(t)}()}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./src/generateContact.js":
+/*!********************************!*\
+  !*** ./src/generateContact.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nfunction generateContact() {\n    let content = document.querySelector('#content')\n\n    let section = document.createElement('div')\n    section.classList.add('content-box')\n\n    let h1 = document.createElement('h1')\n    h1.textContent = 'Get in touch'\n    section.appendChild(h1)\n\n    let contactItem = (name, link, anchorText) => {\n        let div = document.createElement('div')\n        div.classList.add('contact-items')\n        div.textContent = `${name}:`\n\n        let a = document.createElement('a')\n        a.classList.add('contact-link')\n        a.textContent = anchorText\n        a.href = link\n        div.appendChild(a)\n\n        section.appendChild(div)\n    }\n\n    contactItem('Email', 'mailto:timpkelly1@gmail.com', 'timpkelly1@gmail.com')\n    contactItem('LinkedIn', 'https://www.linkedin.com/in/tim-patrick-kelly/', 'linkedin.com/in/tim-patrick-kelly')\n    contactItem('Github', 'https://github.com/timkellytk', 'timkellytk')\n\n    content.appendChild(section)\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (generateContact);\n\n//# sourceURL=webpack:///./src/generateContact.js?");
+
+/***/ }),
+
+/***/ "./src/generateHome.js":
+/*!*****************************!*\
+  !*** ./src/generateHome.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nfunction generateHome() {\n    let content = document.querySelector('#content')\n\n    let section = document.createElement('div')\n    section.classList.add('home')\n    section.setAttribute('id','home')\n\n    let h1 = document.createElement('h1')\n    h1.classList.add('hero-heading')\n    h1.textContent =  'The Kelly\\'s at Glenrowan'\n    section.appendChild(h1)\n\n    let h3 = document.createElement('h3')\n    h3.classList.add('hero-subheading')\n    h3.textContent =  'Established in 1880'\n    section.appendChild(h3)\n\n    let img = document.createElement('img')\n    img.src = \"images/petr-sevcovic-fyQr1T3GE34-unsplash.jpg\"\n    section.appendChild(img)\n\n    content.appendChild(section)\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (generateHome);\n\n//# sourceURL=webpack:///./src/generateHome.js?");
+
+/***/ }),
+
+/***/ "./src/generateMenu.js":
+/*!*****************************!*\
+  !*** ./src/generateMenu.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nfunction generateMenu () {\n    let content = document.querySelector('#content')\n\n    let section = document.createElement('div')\n    section.classList.add('content-box')\n    section.setAttribute('id','menu')\n\n    let grid = document.createElement('div')\n    grid.classList.add('w-layout-grid')\n    grid.classList.add('grid')\n    section.appendChild(grid)\n\n    let menuCategories = (name) => {\n        let category = document.createElement('div')\n        category.classList.add('menu-category')\n        category.setAttribute('id', name)\n        grid.appendChild(category)\n\n        function capitalizeFirstLetter(string) {\n            return string.charAt(0).toUpperCase() + string.slice(1);\n        }\n\n        let h1 = document.createElement('h1')\n        h1.textContent = capitalizeFirstLetter(name)\n        category.appendChild(h1)\n\n        return category\n    }\n\n    let starters = menuCategories('starters')\n    let mains = menuCategories('mains')\n    let desserts = menuCategories('desserts')\n\n    const menuItems = (name, price, category) => {\n        let item = document.createElement('div')\n        item.classList.add('menu-item')\n\n        let itemName = document.createElement('div')\n        itemName.textContent = name\n        item.appendChild(itemName)\n\n        let itemPrice = document.createElement('div')\n        itemPrice.textContent = price\n        item.appendChild(itemPrice)\n\n        category.appendChild(item)\n    };\n    \n    menuItems('Fries', '$4', starters)\n    menuItems('Beef loaded fries', '$6', starters)\n    menuItems('Veggie loaded fries', '$6', starters)\n    menuItems('Chicken nuggets', '$6', starters)\n    menuItems('Beef burger', '$12', mains)\n    menuItems('Chicken burger', '$12', mains)\n    menuItems('Mushroom burger', '$12', mains)\n    menuItems('Vegan burger', '$12', mains)\n    menuItems('Apple crumble', '$7', desserts)\n    menuItems('Lemon curd tart', '$7', desserts)\n    menuItems('Tiramisu', '$7', desserts)\n    menuItems('Deep fried icecream', '$7', desserts)\n\n    content.appendChild(section)\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (generateMenu);\n\n//# sourceURL=webpack:///./src/generateMenu.js?");
+
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _generateHome__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./generateHome */ \"./src/generateHome.js\");\n/* harmony import */ var _generateMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./generateMenu */ \"./src/generateMenu.js\");\n/* harmony import */ var _generateContact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./generateContact */ \"./src/generateContact.js\");\n\n\n\n\nObject(_generateHome__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\nObject(_generateMenu__WEBPACK_IMPORTED_MODULE_1__[\"default\"])()\nObject(_generateContact__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ })
+
+/******/ });

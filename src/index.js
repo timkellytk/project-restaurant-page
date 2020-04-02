@@ -1,5 +1,7 @@
-import {home, menu, contact} from './content';
+import generateHome from './generateHome';
+import generateMenu from './generateMenu';
+import generateContact from './generateContact';
 
-home()
-menu()
-contact()
+generateHome()
+generateMenu()
+generateContact();
