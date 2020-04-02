@@ -136,6 +136,11 @@ body {
   padding-bottom: 20px;
 }
 
+.contact-link {
+  margin-left: 10px;
+  font-weight: 600;
+}
+
 .image {
   width: 600px;
 }

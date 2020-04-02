@@ -112,3 +112,33 @@ let menu = (() => {
 
     content.appendChild(_section)
 })();
+
+// Contact
+let contact = (() => {
+    let _section = document.createElement('div')
+    _section.classList.add('content-box')
+
+    let _h1 = document.createElement('h1')
+    _h1.textContent = 'Get in touch'
+    _section.appendChild(_h1)
+
+    let contactItem = (name, link, anchorText) => {
+        let _div = document.createElement('div')
+        _div.classList.add('contact-items')
+        _div.textContent = `${name}:`
+
+        let _a = document.createElement('a')
+        _a.classList.add('contact-link')
+        _a.textContent = anchorText
+        _a.href = link
+        _div.appendChild(_a)
+
+        _section.appendChild(_div)
+    }
+
+    contactItem('Email', 'mailto:timpkelly1@gmail.com', 'timpkelly1@gmail.com')
+    contactItem('LinkedIn', 'https://www.linkedin.com/in/tim-patrick-kelly/', 'linkedin.com/in/tim-patrick-kelly')
+    contactItem('Github', 'https://github.com/timkellytk', 'timkellytk')
+
+    content.appendChild(_section)
+})();
